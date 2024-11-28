@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            background-color: #f4f4f4;
+        }
+        main {
+            margin: 20px;
+            text-align: center;
+        }
+        #categories {
+            color: #3B4A2E;
+            font-size: 45px;
+            letter-spacing: 10px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        hr {
+            margin-top: 0;
+            height: 1px;
+            border: none;
+            background-color: #A3A0A0;
+        }
+        .recipes {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .recipe-container {
+            position: relative;
+            width: 15%;
+            height: 455px;
+            overflow: hidden;
+            border-radius: 5px;
+            transition: transform 0.4s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .recipe-container img {
+            width: 15%;
+            height: 100%;
+            border-radius: 5px;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+        .recipe-name {
+            font-size: 19px;
+            margin-top: -5px;
+            text-align: center;
+            color: #3B4A2E;
+        }
+        /* Hover effect for the images */
+        .recipe-container:hover img {
+            transform: scale(1.1); /* Zoom in */
+            z-index: 1; /* Bring to the front */
+            width: 30%;
+        }
+        /* Blur and opacity effect for non-hovered images */
+        .recipes:hover img:not(:hover) {
+            opacity: 0.3; /* Fades out the non-hovered images */
+            filter: blur(2px); /* Blurs the non-hovered images */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 id="categories">CATEGORIES</h1>
+        <hr>
+        <div class="recipes"> 
+            <div class="recipe-container" id="main"> 
+                <img src="https://via.placeholder.com/155x430.png?text=Main+Dishes" alt="Main Dishes">
+                <p class="recipe-name">Main Dishes</p>
+            </div>
+            <div class="recipe-container" id="soups"> 
+                <img src="https://via.placeholder.com/155x430.png?text=Soups" alt="Soups">
+                <p class="recipe-name">Soups</p>
+            </div>
+            <div class="recipe-container" id="dessert"> 
+                <img src="https://via.placeholder.com/155x430.png?text=Dessert" alt="Dessert">
+                <p class="recipe-name">Dessert</p>
+            </div>  
+            <div class="recipe-container" id="salads"> 
+                <img src="https://via.placeholder.com/155x430.png?text=Salads" alt="Salads">
+                <p class="recipe-name">Salads</p>
+            </div>
+            <div class="recipe-container" id="appetizer"> 
+                <img src="https://via.placeholder.com/155x430.png?text=Appetizer" alt="Appetizer">
+                <p class="recipe-name">Appetizer</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
